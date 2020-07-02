@@ -83,4 +83,23 @@ h1, h2, h2, h3, h4, h5, h6{
 .nav.navbar-nav{
     display:flex;
     justify-content: space-around;
+    font-family: 'Indie Flower', cursive;
+    color: black;
 }
+
+#w{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1, h2, h2, h3, h4, h5, h6{
+    font-family: 'Finger Paint', cursive;
+    color: navy;
+  }
+  
+.templatemo_topbar .navbar {
+    top: 0px;
+  }
+
