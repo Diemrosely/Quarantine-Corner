@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="astronomy">
+        <div class="title"></div>
+        <div class="explanation"></div>
+
+
+
+        <div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script type="text/javascript">
+
+                var apiKey = "sckfqFaVVfDPW5jR9hOdqownkt64QoaaaUtb9gfD";
+                var queryURL = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
+
+                $.ajax({
+                    url: queryURL,
+                    method: "GET"
+                    
+                })
+                    .then(function (response) {
+                        $(".title").html("<h1>Behold: " + response.title + "</h1>");
+                        $(".explanation").html("<p>" + response.explanation + "</p>");
+                        
+                        var daily = $("<div class ='daily'>");
+                        console.log(queryURL);
+                        console.log(response);
+                        var contentURL = response.url;
+                        console.log(response.url);
+                        var image = $("<img>").attr("src", contentURL);
+                        daily.append(image);
+
+                        
+
+
+
+
+                    });
+
+
+            </script>
+            <!-- <div id="player"></div>
+
+            <script>
+                // 2. This code loads the IFrame Player API code asynchronously.
+                var tag = document.createElement('script');
+
+                tag.src = "";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                // 3. This function creates an <iframe> (and YouTube player)
+                //    after the API code downloads.
+                var player;
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('player', {
+                        height: '390',
+                        width: '640',
+                        videoId: 'hY7m5jjJ9mM',
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                }
+
+                // 4. The API will call this function when the video player is ready.
+                function onPlayerReady(event) {
+                    event.target.playVideo();
+                }
+
+                // 5. The API calls this function when the player's state changes.
+                //    The function indicates that when playing a video (state=1),
+                //    the player should play for six seconds and then stop.
+                var done = false;
+                function onPlayerStateChange(event) {
+                    if (event.data == YT.PlayerState.PLAYING && !done) {
+                        setTimeout(stopVideo, 6000);
+                        done = true;
+                    }
+                }
+                function stopVideo() {
+                    player.stopVideo();
+                } -->
+            <!-- </script> -->
+
+            <!-- <p> <iframe id="ytplayer" type="text/html" width="640" height="360"
+                    src="https://www.youtube.com/embed/re3oEKX6Fks?rel=0" frameborder="0"></iframe>
+            </p> -->
+        </div>
+    </div>
+</body>
+
+</html>
