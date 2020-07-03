@@ -36,7 +36,7 @@ img{border:0; max-width:100%;}
 .crsl-wrap ul{padding:0; margin:0; background:blue;}
 .crsl-wrap ul li{float:left; list-style:none; padding:0; margin:0; font-size:18px;}
 .crsl-wrap ul li a{margin:3px 1px; padding:0; color:#c8c8c8; border:1px solid #c8c8c8; width:28px; height:28px; line-height:28px;}
-.crsl-wrap ul li a:hover{color:#ffffff; border:1px solid #e46142; background:#e46142;}
+.crsl-wrap ul li a:hover{color:#ffffff; border:1px solid #85CFE1; background:#85CFE1;}
 
 @media screen and (max-width:660px){h1{font-size:2.4em; line-height:1.2em;} .crsl-item h3{font-size:1.65em;}}
 
@@ -44,3 +44,62 @@ img{border:0; max-width:100%;}
 .clearfix{display:inline-block; width:100%;}
 html[xmlns] .clearfix{display:block;}
 * html .clearfix{height:1%;}
+
+/* Changes to template */
+.templatemo_topbar{
+    height: 0px;
+}
+
+.templatemo_headerimage{
+    margin-top: 0px;
+}
+
+.blueBack
+{
+    background-color: #85CFE1;
+}
+
+.blueFont
+{
+    color: #85CFE1;
+}
+
+h1, h2, h2, h3, h4, h5, h6{
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .templatemo_topbar .navbar {
+    top: 0px;
+  }
+
+.nav.navbar-nav{
+    background-color: rgba(0,0,0,.2)
+}
+
+#top-menu a:hover{
+    background-color: #85CFE1;
+}
+
+.nav.navbar-nav{
+    display:flex;
+    justify-content: space-around;
+    font-family: 'Indie Flower', cursive;
+    color: black;
+}
+
+#w{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1, h2, h2, h3, h4, h5, h6{
+    font-family: 'Finger Paint', cursive;
+    color: navy;
+  }
+  
+.templatemo_topbar .navbar {
+    top: 0px;
+  }
+
