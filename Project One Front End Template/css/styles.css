@@ -72,9 +72,9 @@ h1, h2, h2, h3, h4, h5, h6{
     top: 0px;
   }
 
-.nav.navbar-nav{
-    background-color: rgba(0,0,0,.2)
-}
+/* .nav.navbar-nav{
+   
+} */
 
 #top-menu a:hover{
     background-color: #85CFE1;
@@ -95,11 +95,55 @@ h1, h2, h2, h3, h4, h5, h6{
 }
 
 h1, h2, h2, h3, h4, h5, h6{
-    font-family: 'Finger Paint', cursive;
-    color: navy;
+    font-family: 'Modak', cursive;
+    color: darkorange;
   }
   
 .templatemo_topbar .navbar {
     top: 0px;
   }
 
+.templatemo_headerimage{
+    width:100%;
+    height: 80%;
+}
+
+.bgBlue{
+    background-color: #5ee1e6;
+}
+
+.bgOrange{
+    background-color: #edb761;
+}
+
+.bgPurple{
+    background-color: #b761ed;
+}
+
+.bgGreen{
+    background-color: #61ed8e;
+}
+
+.mh300{
+    min-height: 300px;
+}
+
+.templatemo_servicewrapper{
+    background-color:#f5f4bc;
+}
+
+.mt60{
+    margin-top: 60px;
+}
+
+.templatemo_workwrapper{
+    padding-top: 0px;
+}
+
+.mh200{
+    min-height: 200px;
+}
+
+.centerText{
+    text-align: center;
+}
