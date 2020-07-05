@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="astronomy">
+        <div class="title"></div>
+        <div class="explanation"></div>
+
+
+
+        <div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+                
+            
+           <script type="text/javascript">
+            var apiKey = "sckfqFaVVfDPW5jR9hOdqownkt64QoaaaUtb9gfD";
+            var queryURL = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+                .then(function (response) {
+                    // load iframe API
+                    var tag = document.createElement('script');
+                    tag.src = "https://www.youtube.com/iframe_api";
+                    $("body").append(tag);
+                    $(".title").html("<h1>Behold: " + response.title + "</h1>");
+                    $(".explanation").html("<p>" + response.explanation + "</p>");
+                    var daily = $("<div class ='daily'>");
+                    $(".astronomy").append(daily);
+                    console.log(queryURL);
+                    console.log(response);
+                    if (response.media_type === "image"){
+                        var contentURL = response.url;
+                        console.log(response.url);
+                        var image = $("<img>").attr("src", contentURL);
+                        daily.append(image);
+                    }
+                    else{
+                        var player = $("<iframe>");
+                        var srcURL = response.url;
+                        player.attr({
+                            type: "text/html",
+                            width: "640",
+                            height: "390",
+                            frameborder: "0",
+                            src: srcURL
+                        });
+                        daily.append(player);
+                    }
+                });
+        </script>
+        </div>
+    </div>
+</body>
+
+</html>

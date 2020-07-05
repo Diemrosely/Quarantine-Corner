@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test api</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="astronomy">
+        <div class="title"></div>
+        <div class="explanation"></div>
+    </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script type="text/javascript">
+                var apiKey = "sckfqFaVVfDPW5jR9hOdqownkt64QoaaaUtb9gfD";
+                var queryURL = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
+                $.ajax({
+                    url: queryURL,
+                    method: "GET"
+                })
+                    .then(function (response) {
+                        $(".title").html("<h1>Behold: " + response.title + "</h1>");
+                        $(".explanation").html("<p>" + response.explanation + "</p>");
+                        var daily = $("<div class ='daily'>");
+                        $(".astronomy").append(daily);
+                        console.log(queryURL);
+                        console.log(response);
+                        var contentURL = response.url;
+                        console.log(response.url);
+                        var image = $("<img>").attr("src", contentURL);
+                        daily.append(image);
+                    });
+            </script>
+</body>
+</html>
