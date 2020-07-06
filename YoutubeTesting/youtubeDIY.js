@@ -30,7 +30,7 @@ function getYoutubeVideo(searchQuery) {
         method: "GET"
     })
         .then(function (response) {
-            console.log(youtubeQueryURL);
+            // console.log(youtubeQueryURL);
             // console.log(response.items[0].id.videoId);
             // response.items.forEach(function (item) {
             //   videosRetreived.push(item.id.videoId);
