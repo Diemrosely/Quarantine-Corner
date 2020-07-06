@@ -7,36 +7,39 @@
     <title>Daily Astronomy</title>
 </head>
 <style>
-    h1{
+    .title {
         margin-top: 10px;
         text-align: center;
         color: #6126FF;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     }
-    p{
+
+    .explanation {
         text-align: center;
         color: #16004F;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
     }
-    .media{
+
+    .media {
         margin: auto;
     }
-
 </style>
+
 <body>
-    <nav style="background-color: #5ee1e6; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; !important;"class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav style="background-color: #5ee1e6 !important;"
+        class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="../index.html"> Home </a>
         <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href=> Daily Astronomy <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href=> Daily Astronomy <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
 
         </div>
-      </nav>
-    
+    </nav>
+
     <div class="astronomy">
         <div class="title"></div>
         <div class="explanation"></div>
@@ -46,48 +49,50 @@
         <div class="media">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-                
-            
-           <script type="text/javascript">
-            var apiKey = "sckfqFaVVfDPW5jR9hOdqownkt64QoaaaUtb9gfD";
-            var queryURL = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
-            $.ajax({
-                url: queryURL,
-                method: "GET"
-            })
-                .then(function (response) {
-                    // load iframe API
-                    var tag = document.createElement('script');
-                    tag.src = "https://www.youtube.com/iframe_api";
-                    $("body").append(tag);
-                    $(".title").html("<h1>Behold: " + response.title + "</h1>");
-                    $(".explanation").html("<p>" + response.explanation + "</p>");
-                    var daily = $("<div class ='daily'>");
-                    $(".astronomy").append(daily);
-                    console.log(queryURL);
-                    console.log(response);
-                    if (response.media_type === "image"){
-                        var contentURL = response.url;
-                        console.log(response.url);
-                        var image = $("<img>").attr("src", contentURL);
-                        daily.append(image);
-                    }
-                    else{
-                        var player = $("<iframe>");
-                        var srcURL = response.url;
-                        player.attr({
-                            type: "text/html",
-                            width: "640",
-                            height: "390",
-                            frameborder: "0",
-                            src: srcURL
-                        });
-                        daily.append(player);
-                    }
-                });
-        </script>
+
+
+            <script type="text/javascript">
+                var apiKey = "sckfqFaVVfDPW5jR9hOdqownkt64QoaaaUtb9gfD";
+                var queryURL = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
+                $.ajax({
+                    url: queryURL,
+                    method: "GET"
+                })
+                    .then(function (response) {
+                        // load iframe API
+                        var tag = document.createElement('script');
+                        tag.src = "https://www.youtube.com/iframe_api";
+                        $("body").append(tag);
+                        $(".title").html("<h1>Behold: " + response.title + "</h1>");
+                        $(".explanation").html("<p>" + response.explanation + "</p>");
+                        var daily = $("<div class ='daily'>");
+                        $(".astronomy").append(daily);
+                        console.log(queryURL);
+                        console.log(response);
+                        if (response.media_type === "image") {
+                            var contentURL = response.url;
+                            console.log(response.url);
+                            var image = $("<img>").attr("src", contentURL);
+                            daily.append(image);
+                        }
+                        else {
+                            var player = $("<iframe>");
+                            var srcURL = response.url;
+                            player.attr({
+                                type: "text/html",
+                                width: "640",
+                                height: "390",
+                                frameborder: "0",
+                                src: srcURL
+                            });
+                            daily.append(player);
+                        }
+                    });
+            </script>
         </div>
     </div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </body>
 
 </html>
