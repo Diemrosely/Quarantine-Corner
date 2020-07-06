@@ -44,7 +44,7 @@ function getYoutubeVideo(searchQuery) {
 function renderVideo(idPassed) {
     //<iframe id="player" type="text/html" width="640" height="390" frameborder="0"></iframe>
     var player = $("iframe");
-    var srcURL = "http://www.youtube.com/embed/" + idPassed + "?enablejsapi=1&origin=http://example.com"
+    var srcURL = "https://www.youtube.com/embed/" + idPassed + "?enablejsapi=1&origin=http://example.com"
     player.attr({
         type: "text/html",
         width: "640",
