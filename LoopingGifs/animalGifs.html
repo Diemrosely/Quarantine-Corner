@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,90 +11,92 @@
 
 </head>
 <style>
-  p{
-    font-family: 'Chewy', cursive;
+    p {
+        font-family: 'Chewy', cursive;
 
-  }
-  .jumbotron{
-    height: 100px;
-  }
-  body{
-    background-color: #e9ecef!important;
-  }
+    }
 
-  .jumbotron img{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-}
+    .jumbotron {
+        height: 100px;
+    }
 
-img{
-    height: 50%;
-    width: 50%;
-}
+    body {
+        background-color: #e9ecef !important;
+    }
 
+    .jumbotron img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    img {
+        height: 50%;
+        width: 50%;
+    }
 </style>
 
 
 <body>
-   
-    <nav style="background-color: #edb761 !important;"class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+    <nav style="background-color: #edb761 !important;" class="navbar navbar-expand-lg navbar-dark bg-primary">
         <!-- <a class="navbar-brand" href="#"></a> -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-      
+
         <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="../index.html"> Home <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html"> Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
 
         </div>
-      </nav>
+    </nav>
 
-<div class="jumbotron text-center">
-    <main class="mb-4">
-      <p class="h1">Random Animal Generator</p>
-      <p class="h2 text-muted">Select an animal of your choice!</p>
-    </main>
-    <div class="container">
-      <div class="row mx-auto" style="width: 278px;">
+    <div class="jumbotron text-center">
+        <main class="mb-4">
+            <p class="h1">Random Animal Generator</p>
+            <p class="h2 text-muted">Select an animal of your choice!</p>
+        </main>
+        <div class="container">
+            <div class="row mx-auto" style="width: 278px;">
 
-        <button type= "button" class="btn btn-warning" id="cats">Cats</button>
-                <button type= "button" class="btn btn-warning" id="dogs">Dogs</button>
-                <button type= "button" class="btn btn-warning" id="pandas">Pandas</button>
-      </div>
-      <div id="iframe" class="container mt-3">
-        <iframe src="" frameborder="0"></iframe>
-      </div>
+                <button type="button" class="btn btn-warning" id="cats">Cats</button>
+                <button type="button" class="btn btn-warning" id="dogs">Dogs</button>
+                <button type="button" class="btn btn-warning" id="pandas">Pandas</button>
+            </div>
+            <div id="iframe" class="container mt-3">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="jumbotron">
-    <main class="mb-4">
-      <img id="gifHolder" alt="animal gif" style="display: none;">
-    </main>
-    <div class="container">
-      <div class="row mx-auto" style="width: 278px;">
-        <button type="button" class="btn btn-warning" id="previous">Previous</button>
-        <button type= "button" class="btn btn-warning" id="next">Next</button>   
-      </div>
-      <div id="iframe" class="container mt-3">
-        <iframe src="" frameborder="0"></iframe>
-      </div>
+    <div class="jumbotron">
+        <main class="mb-4">
+            <img id="gifHolder" alt="animal gif" style="display: none;">
+        </main>
+        <div class="container">
+            <div class="row mx-auto" style="width: 278px;">
+                <button type="button" class="btn btn-warning" id="previous">Previous</button>
+                <button type="button" class="btn btn-warning" id="next">Next</button>
+            </div>
+            <div id="iframe" class="container mt-3">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
     </div>
-  </div>
 
     <script src="animalsGifs.js"></script>
 
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
-integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
 
 </body>
 
