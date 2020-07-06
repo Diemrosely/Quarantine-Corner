@@ -24,7 +24,7 @@ $("body").append(tag);
 // var youtubeQueryURL = baseURL + searchKeyWord + requiredForURL + addItem + queryTerm + query + addItem + typeTerm + addItem + safeSearchSetting + addItem + APIkey;
 // var extraKeys = ["AIzaSyCePn5Anerj-tiIm5A-YxyCPsFdXY9cR4E","AIzaSyDwe0HaXnUujuLTZ9aVYIuxZbb-L7vpECE","AIzaSyAW1bTymjwcG07M-NNP3myY5Kys4yS3VLI","AIzaSyAdidXV81xrcUysovo9IIXmLLqnhI3dxhU"]
 function getYoutubeVideo(searchQuery) {
-    var youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + searchQuery + "&type=video&safeSearch=strict&maxResults=1&key=AIzaSyAdidXV81xrcUysovo9IIXmLLqnhI3dxhU"
+    var youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + searchQuery + "&type=video&safeSearch=strict&maxResults=1&key=AIzaSyCePn5Anerj-tiIm5A-YxyCPsFdXY9cR4E"
     $.ajax({
         url: youtubeQueryURL,
         method: "GET"
