@@ -5,50 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test api</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
 
 </head>
 <style>
-    .container{
-        margin: auto;
-    }
+  p{
+    font-family: 'Chewy', cursive;
+
+  }
+  .jumbotron{
+    height: 100px;
+  }
+  body{
+    background-color: #e9ecef!important;
+  }
+
+  .jumbotron img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+img{
+    height: 50%;
+    width: 50%;
+}
+
+
 </style>
+
 
 <body>
    
     <nav style="background-color: #edb761 !important;"class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#"> Animal Generator </a>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation"> -->
+        <!-- <a class="navbar-brand" href="#"></a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="../Project One Front End Template/index.html"> Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="../index.html"> Home <span class="sr-only">(current)</span></a>
             </li>
           </ul>
 
         </div>
       </nav>
 
+<div class="jumbotron text-center">
+    <main class="mb-4">
+      <p class="h1">Random Animal Generator</p>
+      <p class="h2 text-muted">Select an animal of your choice!</p>
+    </main>
+    <div class="container">
+      <div class="row mx-auto" style="width: 278px;">
 
-    <main>
-        <div class="container">
-            <div class="row">
-                <button type="button" class="btn btn-warning" id="previous">Previous</button>
-                <!-- <button id="previous">Left button (previous)</button> -->
-                <div>
-                    <img id="gifHolder" alt="animal gif" style="display: #;">
-                </div>
-                <button type= "button" class="btn btn-warning" id="animals">Next random Gif</button>
-            </div>
-            <div class="row">
-                <button type= "button" class="btn btn-warning" id="cats">Cats</button>
+        <button type= "button" class="btn btn-warning" id="cats">Cats</button>
                 <button type= "button" class="btn btn-warning" id="dogs">Dogs</button>
                 <button type= "button" class="btn btn-warning" id="pandas">Pandas</button>
-            </div>
-        </div>
+      </div>
+      <div id="iframe" class="container mt-3">
+        <iframe src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <main class="mb-4">
+      <img id="gifHolder" alt="animal gif" style="display: none;">
     </main>
+    <div class="container">
+      <div class="row mx-auto" style="width: 278px;">
+        <button type="button" class="btn btn-warning" id="previous">Previous</button>
+        <button type= "button" class="btn btn-warning" id="next">Next</button>   
+      </div>
+      <div id="iframe" class="container mt-3">
+        <iframe src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
     <script src="animalsGifs.js"></script>
 
 
